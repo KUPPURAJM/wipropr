@@ -1,0 +1,126 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tneb;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author skcet
+ */
+public class TNEB {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int ch;
+        int ch1;
+        int c1=1;
+        int u1;
+        int t1;
+        String season;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter your choice:");
+        System.out.println("1.Individuals 2.corporates");
+        ch=sc.nextInt();
+        if(ch==1)
+        {
+            System.out.println("Individuals");
+            System.out.println("1.APL 2.BPL");
+            ch1=sc.nextInt();
+            if(ch1==1)
+            {
+                System.out.println("Above poverty Line");
+                System.out.println("enter the units of current");
+                u1=sc.nextInt();
+                u1=u1*15;
+                System.out.println(u1);
+                sc.nextLine();
+                season=sc.nextLine();
+                if("summer".equals(season))
+                {
+                    t1=u1*2;
+                }
+                
+            }
+            else
+            {
+                System.out.println("Below poverty Line");
+                System.out.println("enter the units of current");
+                u1=sc.nextInt();
+                u1=u1*12;
+                System.out.println(u1);
+                sc.nextLine();
+                season=sc.nextLine();
+                if(season.equals("summer"))
+                {
+                    t1=u1*2;
+                }
+                
+                
+            }
+        }
+        else
+        {
+            System.out.println("Corporates");
+            System.out.println("1.SSI 2.MSI 3.LSI");
+            int ch2=sc.nextInt();
+            if(ch2==1)
+            {
+                System.out.println("Small scale industries");
+                System.out.println("enter the units of current");
+                u1=sc.nextInt();
+                u1=u1*30;
+                System.out.println(u1);
+                System.out.println("enter the season");
+                sc.nextLine();
+                season=sc.nextLine();
+                if(season.equals("summer"))
+                {
+                    t1=u1*2;
+                    System.out.println(t1);
+                }
+                
+                
+            }
+            else if(ch2==2)
+            {
+                System.out.println("Medium scale industries");
+                System.out.println("enter the units of current");
+                u1=sc.nextInt();
+                u1=u1*45;
+                System.out.println(u1);
+                sc.nextLine();
+                season=sc.nextLine();
+                if(season.equals("summer"))
+                {
+                    t1=u1*2;
+                }
+                
+                
+            }
+            else
+            {
+                System.out.println("Large scale industries");
+                System.out.println("enter the units of current");
+                u1=sc.nextInt();
+                u1=u1*60;
+                System.out.println(u1);
+                season=sc.nextLine();
+                if(season.equals("summer"))
+                {
+                    t1=u1*2;
+                }
+                
+                
+            }
+        }   
+        
+    }
+    
+}
